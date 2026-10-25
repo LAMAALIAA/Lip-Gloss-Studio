@@ -1,3 +1,41 @@
+// Firebase Anonymous Authentication for Lip Gloss Studio
+import { initializeApp } from "https://www.gstatic.com/firebasejs/13.1.0/firebase-app.js";
+import {
+  getAuth,
+  signInAnonymously,
+  onAuthStateChanged
+} from "https://www.gstatic.com/firebasejs/13.1.0/firebase-auth.js";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyAVDtQL3zC6Up0_w4kJFfgdx20Km94sSQ8",
+  authDomain: "lipglossmaker-dddac.firebaseapp.com",
+  projectId: "lipglossmaker-dddac",
+  storageBucket: "lipglossmaker-dddac.firebasestorage.app",
+  messagingSenderId: "635047134057",
+  appId: "1:635047134057:web:71357de25769538a55f3f8",
+  measurementId: "G-6BC5R49Q2H"
+};
+
+const firebaseApp = initializeApp(firebaseConfig);
+const auth = getAuth(firebaseApp);
+
+// Restore the existing session, or create an anonymous user if this is a first visit.
+onAuthStateChanged(auth, (user) => {
+  if (user) {
+    window.lipGlossUser = {
+      uid: user.uid,
+      isAnonymous: user.isAnonymous
+    };
+    console.info("Lip Gloss user session is ready.");
+    return;
+  }
+
+  window.lipGlossUser = null;
+  signInAnonymously(auth).catch((error) => {
+    console.error("Firebase anonymous sign-in failed:", error.code, error.message);
+  });
+});
+
 const translations = {
   en: {
     brand:"Lip Gloss Studio",tagline:"MIX · CREATE · SHINE",home:"⌂ Home",play:"Play",tutorial:"Tutorial",about:"About",
