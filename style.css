@@ -41,9 +41,3 @@ html[dir="rtl"] body{font-family:'Tajawal','Quicksand',sans-serif}html[dir="rtl"
 .saved-delete:hover{background:#fbe3ed}
 @media(max-width:900px){.saved-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.saved-section{margin:18px 12px;padding:22px 16px}}
 @media(max-width:520px){.saved-grid{grid-template-columns:1fr}.saved-section-heading h2{font-size:21px}.saved-design-preview{height:125px}.saved-actions button{font-size:11px}}
-
-/* Step 1: adjustable glitter and shine */
-.shine-control-label{display:block;margin-top:13px}
-.shine-select{width:100%;border:1px solid #efcfdd;border-radius:11px;padding:11px 12px;background:#fff9fc;color:var(--ink);font-size:12px}
-.glitter-overlay{position:absolute;z-index:1;inset:18px 7px 12px;pointer-events:none;overflow:hidden;color:#fff;text-shadow:0 0 5px #fff,0 0 11px #f7a6cb;font-size:13px;letter-spacing:5px;line-height:2.4;word-break:break-all;opacity:.68;animation:gloss-glitter 1.5s ease-in-out infinite alternate}
-@keyframes gloss-glitter{from{filter:brightness(.85);transform:translateY(0)}to{filter:brightness(1.35);transform:translateY(-2px)}}

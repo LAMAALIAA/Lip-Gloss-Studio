@@ -18,6 +18,7 @@
     <button class="nav-link" data-nav="play" data-i18n="play">Play</button>
     <button class="nav-link" data-nav="tutorial" data-i18n="tutorial">Tutorial</button>
     <button class="nav-link" data-nav="about" data-i18n="about">About</button>
+    <button class="nav-link" data-nav="saved" data-i18n="savedNav">My designs</button>
   </nav>
   <button class="language" id="languageToggle" aria-label="Switch language">العربية</button>
 </header>
@@ -114,6 +115,24 @@
     <button class="save-button" id="saveButton">♡ <span data-i18n="saveDesign">Save my design</span></button>
   </aside>
 </main>
+
+<section class="saved-section" id="savedDesigns" aria-labelledby="savedHeading">
+  <div class="saved-section-heading">
+    <div>
+      <div class="eyebrow" data-i18n="savedEyebrow">YOUR LITTLE COLLECTION</div>
+      <h2 id="savedHeading" data-i18n="savedHeading">My saved designs</h2>
+      <p data-i18n="savedIntro">All the glosses you save will appear here.</p>
+    </div>
+    <span class="saved-count" id="savedCount">0</span>
+  </div>
+  <div class="saved-empty" id="savedEmpty" hidden>
+    <span>♡</span>
+    <strong data-i18n="savedEmptyTitle">Your collection is waiting</strong>
+    <p data-i18n="savedEmptyText">Create a gloss and press “Save my design” to keep it here.</p>
+  </div>
+  <div class="saved-grid" id="savedGrid"></div>
+</section>
+
 <footer><span>♥</span> <span data-i18n="footer">Small ingredients. Big magic.</span> <span>✧</span></footer>
 <div class="toast" id="toast" role="status"></div>
 </body>
