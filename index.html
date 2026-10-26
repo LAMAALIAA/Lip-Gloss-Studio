@@ -18,7 +18,6 @@
     <button class="nav-link" data-nav="play" data-i18n="play">Play</button>
     <button class="nav-link" data-nav="tutorial" data-i18n="tutorial">Tutorial</button>
     <button class="nav-link" data-nav="about" data-i18n="about">About</button>
-    <button class="nav-link" data-nav="saved" data-i18n="savedNav">My designs</button>
   </nav>
   <button class="language" id="languageToggle" aria-label="Switch language">العربية</button>
 </header>
@@ -52,9 +51,8 @@
       <button class="category" data-tab="scents"><span>🌸</span><b data-i18n="scents">Scents</b></button>
     </div>
 
-    <p class="color-mix-hint" data-i18n="colorMixHint">Choose one or more colors to blend</p>
     <div class="mixing-area">
-      <div class="color-picker" aria-label="Choose one or more gloss colors">
+      <div class="color-picker" aria-label="Choose a gloss color">
         <button class="swatch selected" style="--swatch:#f47da7" data-color="#f47da7" data-color-name="Pink" data-color-ar="وردي" aria-label="Pink"></button>
         <button class="swatch" style="--swatch:#d85a91" data-color="#d85a91" data-color-name="Berry" data-color-ar="توتي" aria-label="Berry"></button>
         <button class="swatch" style="--swatch:#c69bdb" data-color="#c69bdb" data-color-name="Lilac" data-color-ar="ليلكي" aria-label="Lilac"></button>
@@ -94,13 +92,19 @@
       <span class="decor decor-a">✧</span><span class="decor decor-b">✦</span><span class="decor decor-c">♡</span>
       <div class="bottle" id="bottle">
         <div class="cap"><div class="cap-shine"></div></div>
-        <div class="tube"><div class="tube-liquid" id="tubeLiquid"></div><div class="label-sticker"><span>✧</span><b id="bottleName">Pink Dream</b><small data-i18n="labelEdition">GLOSS COLLECTION</small></div></div>
+        <div class="tube"><div class="tube-liquid" id="tubeLiquid"></div><div class="glitter-overlay" id="glitterOverlay" aria-hidden="true">✦ ✧ · ✦ · ✧</div><div class="label-sticker"><span>✧</span><b id="bottleName">Pink Dream</b><small data-i18n="labelEdition">GLOSS COLLECTION</small></div></div>
         <div class="bottle-base"></div>
       </div>
       <span class="scene-caption" data-i18n="previewCaption">Handmade with a little magic</span>
     </div>
     <label class="input-label" for="glossName" data-i18n="nameLabel">Name your gloss</label>
     <input id="glossName" class="name-input" maxlength="24" value="Pink Dream" placeholder="e.g. Pink Dream">
+    <label class="input-label shine-control-label" for="shineLevel" data-i18n="glitterIntensity">Glitter & shine</label>
+    <select id="shineLevel" class="shine-select" aria-label="Glitter and shine intensity">
+      <option value="1" data-i18n="shineSoft">Soft sparkle</option>
+      <option value="2" selected data-i18n="shineMedium">Medium sparkle</option>
+      <option value="3" data-i18n="shineStrong">Extra sparkle</option>
+    </select>
     <div class="preview-stats">
       <div><span data-i18n="selectedColor">Selected color</span><b id="colorName">Pink</b></div>
       <div><span data-i18n="shineLevel">Shine level</span><b id="shineStars">★☆☆☆☆</b></div>
@@ -110,23 +114,6 @@
     <button class="save-button" id="saveButton">♡ <span data-i18n="saveDesign">Save my design</span></button>
   </aside>
 </main>
-
-<section class="saved-section" id="savedDesigns" aria-labelledby="savedHeading">
-  <div class="saved-section-heading">
-    <div>
-      <div class="eyebrow" data-i18n="savedEyebrow">YOUR LITTLE COLLECTION</div>
-      <h2 id="savedHeading" data-i18n="savedHeading">My saved designs</h2>
-      <p data-i18n="savedIntro">All the glosses you save will appear here.</p>
-    </div>
-    <span class="saved-count" id="savedCount">0</span>
-  </div>
-  <div class="saved-empty" id="savedEmpty">
-    <span>♡</span>
-    <strong data-i18n="savedEmptyTitle">Your collection is waiting</strong>
-    <p data-i18n="savedEmptyText">Create a gloss and press “Save my design” to keep it here.</p>
-  </div>
-  <div class="saved-grid" id="savedGrid" aria-live="polite"></div>
-</section>
 <footer><span>♥</span> <span data-i18n="footer">Small ingredients. Big magic.</span> <span>✧</span></footer>
 <div class="toast" id="toast" role="status"></div>
 </body>
