@@ -38,7 +38,7 @@ onAuthStateChanged(auth, (user) => {
 
 const translations = {
   en: {
-    brand:"Lip Gloss Studio",tagline:"MIX · CREATE · SHINE",home:"⌂ Home",play:"Play",tutorial:"Tutorial",about:"About",savedNav:"My designs",savedEyebrow:"YOUR LITTLE COLLECTION",savedHeading:"My saved designs",savedIntro:"All the glosses you save will appear here.",savedEmptyTitle:"Your collection is waiting",savedEmptyText:"Create a gloss and press “Save my design” to keep it here.",useDesign:"Use design",deleteDesign:"Delete",savedDate:"Saved",ingredientsLabel:"Ingredients",noIngredients:"No ingredients added",confirmDelete:"Delete this saved design?",
+    brand:"Lip Gloss Studio",tagline:"MIX · CREATE · SHINE",challengeEyebrow:"A LITTLE DAILY MISSION",challengeHeading:"Daily gloss challenge",challengeIntro:"Try today’s creative mission and earn points!",pointsLabel:"points",challengeBlendTitle:"Color mixer",challengeBlendDesc:"Choose at least two colors and mix your gloss.",challengeShimmerTitle:"Make it sparkle",challengeShimmerDesc:"Add shimmer to your formula, then mix it.",challengeScentTitle:"Scent combo",challengeScentDesc:"Choose a scent and softening oil, then mix.",challengeDateLabel:"TODAY’S MISSION",challengeSteps:"steps",challengeReward:"+20 points",challengeIncomplete:"♡ Not completed yet",challengeComplete:"Challenge complete! +20 points ✨",challengeAlreadyDone:"Today’s points already earned 💗",challengeProgressDone:"Completed",home:"⌂ Home",play:"Play",tutorial:"Tutorial",about:"About",savedNav:"My designs",savedEyebrow:"YOUR LITTLE COLLECTION",savedHeading:"My saved designs",savedIntro:"All the glosses you save will appear here.",savedEmptyTitle:"Your collection is waiting",savedEmptyText:"Create a gloss and press “Save my design” to keep it here.",useDesign:"Use design",deleteDesign:"Delete",savedDate:"Saved",ingredientsLabel:"Ingredients",noIngredients:"No ingredients added",confirmDelete:"Delete this saved design?",
     welcome:"YOUR LITTLE BEAUTY LAB",goalTitle:"Your goal ✧",goalText:"Create your dream lip gloss. Pick a shade, add your favorite ingredients, then mix!",
     stepsTitle:"Your steps",step1:"Choose a color",step2:"Add ingredients",step3:"Mix it well",step4:"Fill your tube",step5:"Ready to shine!",
     tip:"Little tip: shimmer makes your gloss sparkle.",workbenchEyebrow:"LET’S GET CREATIVE",workbenchTitle:"Make your formula",
@@ -58,7 +58,7 @@ const translations = {
     savedTitle:"Saved gloss design",savedText:"Your design was saved in this browser."
   },
   ar: {
-    brand:"استوديو الليب قلوس",tagline:"اخلطي · ابتكري · تألقي",home:"⌂ الرئيسية",play:"العبِي",tutorial:"طريقة اللعب",about:"عن اللعبة",savedNav:"تصاميمي",savedEyebrow:"مجموعتك الصغيرة",savedHeading:"تصاميمي المحفوظة",savedIntro:"كل تصاميم الليب قلوس اللي تحفظينها بتظهر هنا.",savedEmptyTitle:"مجموعتك بانتظار إبداعاتك",savedEmptyText:"صممي ليب قلوس واضغطي «احفظي تصميمي» عشان تحتفظين فيه هنا.",useDesign:"استخدمي التصميم",deleteDesign:"حذف",savedDate:"تاريخ الحفظ",ingredientsLabel:"المكونات",noIngredients:"بدون مكونات",confirmDelete:"تبغين تحذفين هذا التصميم المحفوظ؟",
+    brand:"استوديو الليب قلوس",tagline:"اخلطي · ابتكري · تألقي",challengeEyebrow:"مهمة يومية صغيرة",challengeHeading:"تحدي الليب قلوس اليومي",challengeIntro:"جربي مهمة اليوم الإبداعية واجمعي النقاط!",pointsLabel:"نقطة",challengeBlendTitle:"خبيرة مزج الألوان",challengeBlendDesc:"اختاري لونين على الأقل واخلطي الليب قلوس.",challengeShimmerTitle:"خلّيه يلمع",challengeShimmerDesc:"أضيفي اللمعة إلى تركيبتك ثم اخلطيها.",challengeScentTitle:"خلطة الروائح",challengeScentDesc:"اختاري رائحة وزيت تنعيم، ثم اخلطي المكونات.",challengeDateLabel:"مهمة اليوم",challengeSteps:"خطوات",challengeReward:"+٢٠ نقطة",challengeIncomplete:"♡ لم يكتمل التحدي بعد",challengeComplete:"اكتمل التحدي! +٢٠ نقطة ✨",challengeAlreadyDone:"جمعتي نقاط اليوم بالفعل 💗",challengeProgressDone:"مكتمل",home:"⌂ الرئيسية",play:"العبِي",tutorial:"طريقة اللعب",about:"عن اللعبة",savedNav:"تصاميمي",savedEyebrow:"مجموعتك الصغيرة",savedHeading:"تصاميمي المحفوظة",savedIntro:"كل تصاميم الليب قلوس اللي تحفظينها بتظهر هنا.",savedEmptyTitle:"مجموعتك بانتظار إبداعاتك",savedEmptyText:"صممي ليب قلوس واضغطي «احفظي تصميمي» عشان تحتفظين فيه هنا.",useDesign:"استخدمي التصميم",deleteDesign:"حذف",savedDate:"تاريخ الحفظ",ingredientsLabel:"المكونات",noIngredients:"بدون مكونات",confirmDelete:"تبغين تحذفين هذا التصميم المحفوظ؟",
     welcome:"مختبر الجمال الصغير",goalTitle:"هدفك ✧",goalText:"ابتكري الليب قلوس اللي تحلمين فيه! اختاري اللون، أضيفي مكوناتك المفضلة، ثم اخلطيها.",
     stepsTitle:"خطواتك",step1:"اختاري اللون",step2:"أضيفي المكونات",step3:"اخلطي جيدًا",step4:"عبّي العبوة",step5:"جاهز للتألق!",
     tip:"نصيحة صغيرة: اللمعة تخلي الليب قلوس يتلألأ.",workbenchEyebrow:"يلا نبدع",workbenchTitle:"اصنعي تركيبتك",
@@ -150,6 +150,42 @@ function updateColorSelection(){
     button.setAttribute("aria-pressed",String(selected));
   });
 }
+const DAILY_CHALLENGE_KEY="lipGlossDailyChallenge";
+const DAILY_POINTS_KEY="lipGlossStudioPoints";
+function localDayKey(){const d=new Date();return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,"0")}-${String(d.getDate()).padStart(2,"0")}`;}
+function currentChallenge(){
+  const d=new Date();const start=new Date(d.getFullYear(),0,0);const day=Math.floor((d-start)/86400000);
+  const challenges=[
+    {id:"blend",title:"challengeBlendTitle",description:"challengeBlendDesc",progress:()=>state.colors.length>=2?1:0,steps:1,done:()=>state.colors.length>=2&&state.mixed},
+    {id:"shimmer",title:"challengeShimmerTitle",description:"challengeShimmerDesc",progress:()=>state.ingredients.has("shimmer")?1:0,steps:1,done:()=>state.ingredients.has("shimmer")&&state.mixed},
+    {id:"scent",title:"challengeScentTitle",description:"challengeScentDesc",progress:()=>Number(state.ingredients.has("oil"))+Number([...state.ingredients].some(x=>x.startsWith("scent-"))),steps:2,done:()=>state.ingredients.has("oil")&&[...state.ingredients].some(x=>x.startsWith("scent-"))&&state.mixed}
+  ];
+  return challenges[day%challenges.length];
+}
+function readChallengeRecord(){try{return JSON.parse(localStorage.getItem(DAILY_CHALLENGE_KEY)||"{}");}catch(e){return {};}}
+function updateChallenge(){
+  const challenge=currentChallenge(),dayKey=localDayKey(),record=readChallengeRecord();
+  const points=Math.max(0,Number(localStorage.getItem(DAILY_POINTS_KEY))||0);
+  $("#pointsTotal").textContent=String(points);
+  $("#challengeDate").textContent=tr("challengeDateLabel")+" · "+new Date().toLocaleDateString(state.lang==="ar"?"ar-SA":"en-US",{weekday:"short",month:"short",day:"numeric"});
+  $("#challengeTitle").textContent=tr(challenge.title);$("#challengeDescription").textContent=tr(challenge.description);
+  const doneToday=record.date===dayKey&&record.challengeId===challenge.id&&record.completed===true;
+  const progress=challenge.done()?challenge.steps:Math.min(challenge.steps,challenge.progress());
+  $("#challengeProgressBar").style.width=(doneToday?100:Math.round(progress/challenge.steps*100))+"%";
+  $("#challengeProgressText").textContent=doneToday?tr("challengeProgressDone"):`${progress} / ${challenge.steps} ${tr("challengeSteps")}`;
+  $("#challengeReward").textContent=state.lang==="ar"?"+٢٠ نقطة":"+20 points";
+  $("#challengeStatus").textContent=doneToday?tr("challengeAlreadyDone"):tr("challengeIncomplete");
+  $("#dailyChallenge").classList.toggle("challenge-complete",doneToday);
+}
+function awardChallengeIfComplete(){
+  const challenge=currentChallenge();if(!challenge.done())return;
+  const dayKey=localDayKey(),record=readChallengeRecord();
+  if(record.date===dayKey&&record.challengeId===challenge.id&&record.completed)return;
+  const total=Math.max(0,Number(localStorage.getItem(DAILY_POINTS_KEY))||0)+20;
+  try{localStorage.setItem(DAILY_POINTS_KEY,String(total));localStorage.setItem(DAILY_CHALLENGE_KEY,JSON.stringify({date:dayKey,challengeId:challenge.id,completed:true}));}catch(e){console.warn("Could not store challenge progress",e);}
+  updateChallenge();toast(tr("challengeComplete"));
+}
+
 function update(){
   document.documentElement.style.setProperty("--liquid",state.color);
   $("#liquid").style.background=state.color;
@@ -176,6 +212,7 @@ function update(){
   $("#bottleName").textContent=glossName;
   $("#feedback").textContent=state.mixed?`${glossName} ${tr("readyMessage")}`:state.ingredients.size?tr("addMore"):tr("feedbackStart");
   for(let i=1;i<=5;i++)$("#step"+i).classList.toggle("done",[true,state.ingredients.size>0,state.mixed,state.mixed,state.mixed][i-1]);
+  updateChallenge();
 }
 function renderSavedDesigns(){
   const grid=$("#savedGrid"), empty=$("#savedEmpty"), designs=getSavedDesigns();
@@ -243,7 +280,7 @@ $("#mixButton").addEventListener("click",()=>{
   if(!state.ingredients.size){toast(tr("needIngredient"));return;}
   state.mixed=false;$("#mixButton").disabled=true;$("#mixStatus").textContent=tr("statusMixing");
   $("#liquid").style.height="84%";$("#mixButton").querySelector("[data-i18n]").textContent=state.lang==="ar"?"جاري الخلط...":"Mixing...";
-  setTimeout(()=>{state.mixed=true;$("#mixButton").disabled=false;$("#mixButton").querySelector("[data-i18n]").textContent=tr("mix");update();toast(tr("statusReady"));},850);
+  setTimeout(()=>{state.mixed=true;$("#mixButton").disabled=false;$("#mixButton").querySelector("[data-i18n]").textContent=tr("mix");update();awardChallengeIfComplete();toast(tr("statusReady"));},850);
 });
 $("#glossName").addEventListener("input",()=>{update()});
 $("#shineLevel").addEventListener("change",e=>{state.shine=Number(e.target.value)||2;update();});
