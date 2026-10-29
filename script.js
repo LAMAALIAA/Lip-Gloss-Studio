@@ -42,10 +42,10 @@ const translations = {
     welcome:"YOUR LITTLE BEAUTY LAB",goalTitle:"Your goal ✧",goalText:"Create your dream lip gloss. Pick a shade, add your favorite ingredients, then mix!",
     stepsTitle:"Your steps",step1:"Choose a color",step2:"Add ingredients",step3:"Mix it well",step4:"Fill your tube",step5:"Ready to shine!",
     tip:"Little tip: shimmer makes your gloss sparkle.",workbenchEyebrow:"LET’S GET CREATIVE",workbenchTitle:"Make your formula",
-    colors:"Colors",oils:"Oils",shimmers:"Shimmer",scents:"Scents",readyMix:"Your mixture is ready",mix:"Mix ingredients",
+    colors:"Colors",colorMixHint:"Choose one or more colors to blend",oils:"Oils",shimmers:"Shimmer",scents:"Scents",readyMix:"Your mixture is ready",mix:"Mix ingredients",
     formulaTitle:"Your formula",nothingAdded:"Nothing added yet",ingredientsTitle:"Choose your ingredients",tapToAdd:"Tap to add or remove",
     base:"Gloss base",baseDesc:"Smooth & glossy",oil:"Softening oil",oilDesc:"Silky feel",shimmer:"Shimmer",shimmerDesc:"Extra sparkle",
-    scent:"Vanilla scent",scentDesc:"Sweet & cozy",previewEyebrow:"YOUR CREATION",previewTitle:"Gloss preview",labelEdition:"GLOSS COLLECTION",
+    scent:"Vanilla scent",scentDesc:"Sweet & cozy",scentVanilla:"Vanilla scent",scentVanillaDesc:"Sweet & cozy",scentStrawberry:"Strawberry",scentStrawberryDesc:"Fruity & sweet",scentRose:"Rose",scentRoseDesc:"Soft floral",scentCoconut:"Coconut",scentCoconutDesc:"Creamy & tropical",previewEyebrow:"YOUR CREATION",previewTitle:"Gloss preview",labelEdition:"GLOSS COLLECTION",
     previewCaption:"Handmade with a little magic",nameLabel:"Name your gloss",selectedColor:"Selected color",shineLevel:"Shine level",glitterIntensity:"Glitter & shine",shineSoft:"Soft sparkle",shineMedium:"Medium sparkle",shineStrong:"Extra sparkle",bottleShapeLabel:"Bottle shape",shapeClassic:"Classic",shapeRound:"Rounded",shapeSlim:"Slim",capColorLabel:"Cap color",capPink:"Blush pink",capLilac:"Lilac",capGold:"Champagne gold",capMint:"Soft mint",capSilver:"Silver",capPlum:"Plum",labelStyleLabel:"Label style",labelClassic:"Classic",labelCute:"Cute hearts",labelLuxury:"Luxury",downloadDesign:"Download design PNG",downloaded:"Your design PNG is ready! ✨",downloadFailed:"Could not download the design. Please try again.",
     feedbackStart:"Looking lovely! Add ingredients and mix to finish your gloss. 💗",startOver:"Start a new gloss",saveDesign:"Save my design",
     footer:"Small ingredients. Big magic.",empty:"Nothing added yet",addedCount:n=>`${n} ingredient${n===1?"":"s"} added`,
@@ -62,10 +62,10 @@ const translations = {
     welcome:"مختبر الجمال الصغير",goalTitle:"هدفك ✧",goalText:"ابتكري الليب قلوس اللي تحلمين فيه! اختاري اللون، أضيفي مكوناتك المفضلة، ثم اخلطيها.",
     stepsTitle:"خطواتك",step1:"اختاري اللون",step2:"أضيفي المكونات",step3:"اخلطي جيدًا",step4:"عبّي العبوة",step5:"جاهز للتألق!",
     tip:"نصيحة صغيرة: اللمعة تخلي الليب قلوس يتلألأ.",workbenchEyebrow:"يلا نبدع",workbenchTitle:"اصنعي تركيبتك",
-    colors:"الألوان",oils:"الزيوت",shimmers:"اللمعة",scents:"الروائح",readyMix:"خلطتك جاهزة",mix:"اخلطي المكونات",
+    colors:"الألوان",colorMixHint:"اختاري لونًا أو أكثر لخلطها معًا",oils:"الزيوت",shimmers:"اللمعة",scents:"الروائح",readyMix:"خلطتك جاهزة",mix:"اخلطي المكونات",
     formulaTitle:"تركيبتك",nothingAdded:"ما أضفتِ أي مكونات",ingredientsTitle:"اختاري المكونات",tapToAdd:"اضغطي للإضافة أو الإزالة",
     base:"قاعدة اللمعان",baseDesc:"ملمس ناعم ولامع",oil:"زيت التنعيم",oilDesc:"ملمس حريري",shimmer:"بودرة لامعة",shimmerDesc:"بريق إضافي",
-    scent:"رائحة الفانيلا",scentDesc:"رائحة حلوة",previewEyebrow:"ابتكارك",previewTitle:"معاينة الليب قلوس",labelEdition:"مجموعة اللمعان",
+    scent:"رائحة الفانيلا",scentDesc:"رائحة حلوة",scentVanilla:"فانيلا",scentVanillaDesc:"حلوة ودافئة",scentStrawberry:"فراولة",scentStrawberryDesc:"فاكهية وحلوة",scentRose:"ورد",scentRoseDesc:"رائحة زهرية ناعمة",scentCoconut:"جوز الهند",scentCoconutDesc:"كريمية واستوائية",previewEyebrow:"ابتكارك",previewTitle:"معاينة الليب قلوس",labelEdition:"مجموعة اللمعان",
     previewCaption:"صُنع بقليل من السحر",nameLabel:"سمّي الليب قلوس",selectedColor:"اللون المختار",shineLevel:"مستوى اللمعان",glitterIntensity:"اللمعة والبريق",shineSoft:"لمعة خفيفة",shineMedium:"لمعة متوسطة",shineStrong:"لمعة قوية",bottleShapeLabel:"شكل العبوة",shapeClassic:"كلاسيكي",shapeRound:"دائري ناعم",shapeSlim:"نحيف",capColorLabel:"لون الغطاء",capPink:"وردي هادئ",capLilac:"ليلكي",capGold:"ذهبي شامبانيا",capMint:"نعناعي فاتح",capSilver:"فضي",capPlum:"برقوقي",labelStyleLabel:"ستايل الملصق",labelClassic:"كلاسيكي",labelCute:"قلوب كيوت",labelLuxury:"فاخر",downloadDesign:"تحميل التصميم PNG",downloaded:"صار تصميمك جاهزًا للتحميل! ✨",downloadFailed:"تعذر تحميل التصميم، حاولي مرة ثانية.",
     feedbackStart:"شكله جميل! أضيفي المكونات واخلطيها عشان تكمّلين الليب قلوس. 💗",startOver:"ابدئي من جديد",saveDesign:"احفظي تصميمي",
     footer:"مكونات بسيطة، وسحر كبير.",empty:"ما أضفتِ أي مكونات",addedCount:n=>`${n} ${n===1?"مكوّن":"مكونات"} مضافة`,
@@ -78,11 +78,11 @@ const translations = {
     savedTitle:"تصميم الليب قلوس المحفوظ",savedText:"تم حفظ تصميمك في هذا المتصفح."
   }
 };
-const state={lang:"en",color:"#f47da7",colorName:"Pink",ingredients:new Set(),mixed:false,shine:2,bottleShape:"classic",capColor:"#e8a8c2",labelStyle:"classic"};
+const state={lang:"en",color:"#f47da7",colorName:"Pink",colors:[{hex:"#f47da7",name:"Pink"}],ingredients:new Set(),mixed:false,shine:2,bottleShape:"classic",capColor:"#e8a8c2",labelStyle:"classic"};
 const SAVED_DESIGNS_KEY="lipGlossStudioDesigns";
 const ingredientLabels={
-  en:{base:"Gloss base",oil:"Softening oil",shimmer:"Shimmer",scent:"Vanilla scent"},
-  ar:{base:"قاعدة اللمعان",oil:"زيت التنعيم",shimmer:"بودرة لامعة",scent:"رائحة الفانيلا"}
+  en:{base:"Gloss base",oil:"Softening oil",shimmer:"Shimmer","scent-vanilla":"Vanilla scent","scent-strawberry":"Strawberry","scent-rose":"Rose","scent-coconut":"Coconut"},
+  ar:{base:"قاعدة اللمعان",oil:"زيت التنعيم",shimmer:"بودرة لامعة","scent-vanilla":"فانيلا","scent-strawberry":"فراولة","scent-rose":"ورد","scent-coconut":"جوز الهند"}
 };
 function getSavedDesigns(){
   try{
@@ -128,6 +128,28 @@ function setLanguage(lang){
   update();
   if($("#savedGrid"))renderSavedDesigns();
 }
+function hexToRgb(hex){
+  const value=hex.replace("#","");
+  return {r:parseInt(value.slice(0,2),16),g:parseInt(value.slice(2,4),16),b:parseInt(value.slice(4,6),16)};
+}
+function blendColors(colors){
+  if(!colors.length)return {hex:"#f47da7",name:"Pink"};
+  if(colors.length===1)return {hex:colors[0].hex,name:colors[0].name};
+  const rgb=colors.map(item=>hexToRgb(item.hex));
+  const mixed={r:0,g:0,b:0};
+  rgb.forEach(c=>{mixed.r+=c.r/rgb.length;mixed.g+=c.g/rgb.length;mixed.b+=c.b/rgb.length;});
+  return {hex:"#"+[mixed.r,mixed.g,mixed.b].map(v=>Math.round(v).toString(16).padStart(2,"0")).join(""),name:colors.map(item=>item.name).join(" + ")};
+}
+function updateColorSelection(){
+  const blended=blendColors(state.colors);
+  state.color=blended.hex;
+  state.colorName=blended.name;
+  document.querySelectorAll(".swatch").forEach(button=>{
+    const selected=state.colors.some(item=>item.hex===button.dataset.color);
+    button.classList.toggle("selected",selected);
+    button.setAttribute("aria-pressed",String(selected));
+  });
+}
 function update(){
   document.documentElement.style.setProperty("--liquid",state.color);
   $("#liquid").style.background=state.color;
@@ -145,9 +167,10 @@ function update(){
   $("#shineLevel").value=String(state.shine);
   $("#bottleShape").value=state.bottleShape;
   $("#capColor").value=state.capColor;
-  $("#colorName").textContent=tr("colorNames")[state.colorName]||state.colorName;
+  const selectedColorNames=state.colors.map(item=>tr("colorNames")[item.name]||item.name);
+  $("#colorName").textContent=selectedColorNames.join(state.lang==="ar"?" + ":" + ");
   $("#formulaCount").textContent=state.ingredients.size?tr("addedCount")(state.ingredients.size):tr("empty");
-  $("#progressPill").textContent=`${state.ingredients.size} / 4`;
+  $("#progressPill").textContent=`${state.ingredients.size} / 7`;
   $("#mixStatus").textContent=state.mixed?tr("statusReady"):state.ingredients.size?tr("addedCount")(state.ingredients.size):tr("readyMix");
   const glossName=$("#glossName").value.trim()||(state.lang==="ar"?"ليب قلوس جديد":"My Gloss");
   $("#bottleName").textContent=glossName;
@@ -168,7 +191,7 @@ function renderSavedDesigns(){
     const title=document.createElement("h3"); title.textContent=design.name|| (state.lang==="ar"?"ليب قلوس جديد":"My Gloss");
     const color=document.createElement("p"); color.className="saved-color-line";
     const dot=document.createElement("span"); dot.className="saved-color-dot"; dot.style.background=design.color||"#f47da7";
-    const colorName=document.createElement("span"); colorName.textContent=(translations[state.lang].colorNames||{})[design.colorName]||design.colorName||""; color.append(dot,colorName);
+    const colorName=document.createElement("span"); const savedNames=Array.isArray(design.colors)&&design.colors.length?design.colors.map(item=>(translations[state.lang].colorNames||{})[item.name]||item.name):(design.colorName||"").split(" + ").map(name=>(translations[state.lang].colorNames||{})[name]||name); colorName.textContent=savedNames.join(state.lang==="ar"?" + ":" + "); color.append(dot,colorName);
     const ingredientLine=document.createElement("p"); ingredientLine.className="saved-ingredients";
     const ingredients=Array.isArray(design.ingredients)?design.ingredients:[];
     ingredientLine.textContent=ingredients.length?ingredients.map(key=>ingredientLabels[state.lang][key]||key).join(" · "):tr("noIngredients");
@@ -181,8 +204,8 @@ function renderSavedDesigns(){
   });
 }
 function loadSavedDesign(design){
-  state.color=design.color||"#f47da7"; state.colorName=design.colorName||"Pink"; state.ingredients=new Set(Array.isArray(design.ingredients)?design.ingredients:[]); state.mixed=Boolean(design.mixed); state.shine=Number(design.shine)||2; state.bottleShape=design.bottleShape||"classic"; state.capColor=design.capColor||"#e8a8c2"; state.labelStyle=design.labelStyle||"classic";
-  document.querySelectorAll(".swatch").forEach(button=>button.classList.toggle("selected",button.dataset.color===state.color));
+  state.colors=Array.isArray(design.colors)&&design.colors.length?design.colors.map(item=>({hex:item.hex,name:item.name})): [{hex:design.color||"#f47da7",name:design.colorName||"Pink"}]; updateColorSelection(); state.ingredients=new Set(Array.isArray(design.ingredients)?design.ingredients:[]); state.mixed=Boolean(design.mixed); state.shine=Number(design.shine)||2; state.bottleShape=design.bottleShape||"classic"; state.capColor=design.capColor||"#e8a8c2"; state.labelStyle=design.labelStyle||"classic";
+  updateColorSelection();
   document.querySelectorAll(".ingredient").forEach(button=>{const active=state.ingredients.has(button.dataset.ing);button.classList.toggle("added",active);button.querySelector(".add-mark").textContent=active?"✓":"+";});
   $("#glossName").value=design.name||"My Gloss"; $("#mixButton").disabled=false; $("#mixButton").querySelector("[data-i18n]").textContent=tr("mix");
   update(); $("#bottle").scrollIntoView({behavior:"smooth",block:"center"}); toast(state.lang==="ar"?"تم تحميل تصميمك 💗":"Design loaded 💗");
@@ -195,9 +218,15 @@ function deleteSavedDesign(id,index){
 }
 
 document.querySelectorAll(".swatch").forEach(button=>button.addEventListener("click",()=>{
-  state.color=button.dataset.color;state.colorName=button.dataset.colorName;state.mixed=false;
-  document.querySelectorAll(".swatch").forEach(b=>b.classList.toggle("selected",b===button));
-  update();toast(tr("colorChanged"));
+  const hex=button.dataset.color;
+  const existing=state.colors.findIndex(item=>item.hex===hex);
+  if(existing>=0){
+    if(state.colors.length===1){toast(state.lang==="ar"?"اختاري لونًا واحدًا على الأقل 💗":"Keep at least one color selected 💗");return;}
+    state.colors.splice(existing,1);
+  }else{
+    state.colors.push({hex,name:button.dataset.colorName});
+  }
+  updateColorSelection();state.mixed=false;update();toast(tr("colorChanged"));
 }));
 document.querySelectorAll(".ingredient").forEach(button=>button.addEventListener("click",()=>{
   const key=button.dataset.ing;
@@ -207,7 +236,7 @@ document.querySelectorAll(".ingredient").forEach(button=>button.addEventListener
 }));
 document.querySelectorAll("[data-tab]").forEach(button=>button.addEventListener("click",()=>{
   document.querySelectorAll("[data-tab]").forEach(b=>b.classList.toggle("active",b===button));
-  const targets={colors:".color-picker",oils:'[data-ing="oil"]',shimmers:'[data-ing="shimmer"]',scents:'[data-ing="scent"]'};
+  const targets={colors:".color-picker",oils:'[data-ing="oil"]',shimmers:'[data-ing="shimmer"]',scents:'[data-ing="scent-vanilla"]'};
   document.querySelector(targets[button.dataset.tab]).scrollIntoView({behavior:"smooth",block:"nearest"});
 }));
 $("#mixButton").addEventListener("click",()=>{
@@ -223,15 +252,14 @@ $("#capColor").addEventListener("change",e=>{state.capColor=e.target.value;updat
 $("#labelStyle").addEventListener("change",e=>{state.labelStyle=e.target.value;update();});
 $("#languageToggle").addEventListener("click",()=>setLanguage(state.lang==="en"?"ar":"en"));
 $("#resetButton").addEventListener("click",()=>{
-  state.ingredients.clear();state.color="#f47da7";state.colorName="Pink";state.mixed=false;state.shine=2;state.bottleShape="classic";state.capColor="#e8a8c2";state.labelStyle="classic";
+  state.ingredients.clear();state.colors=[{hex:"#f47da7",name:"Pink"}];updateColorSelection();state.mixed=false;state.shine=2;state.bottleShape="classic";state.capColor="#e8a8c2";state.labelStyle="classic";
   document.querySelectorAll(".ingredient").forEach(b=>{b.classList.remove("added");b.querySelector(".add-mark").textContent="+"});
-  document.querySelectorAll(".swatch").forEach((b,i)=>b.classList.toggle("selected",i===0));
   $("#glossName").value=state.lang==="ar"?"حلم وردي":"Pink Dream";
   $("#mixButton").disabled=false;$("#mixButton").querySelector("[data-i18n]").textContent=tr("mix");
   update();toast(tr("reset"));
 });
 $("#saveButton").addEventListener("click",()=>{
-  const design={id:`design-${Date.now()}-${Math.random().toString(36).slice(2,7)}`,name:$("#glossName").value.trim()||(state.lang==="ar"?"ليب قلوس جديد":"My Gloss"),color:state.color,colorName:state.colorName,ingredients:[...state.ingredients],mixed:state.mixed,shine:state.shine,bottleShape:state.bottleShape,capColor:state.capColor,labelStyle:state.labelStyle,lang:state.lang,savedAt:new Date().toISOString()};
+  const design={id:`design-${Date.now()}-${Math.random().toString(36).slice(2,7)}`,name:$("#glossName").value.trim()||(state.lang==="ar"?"ليب قلوس جديد":"My Gloss"),color:state.color,colorName:state.colorName,colors:state.colors.map(item=>({...item})),ingredients:[...state.ingredients],mixed:state.mixed,shine:state.shine,bottleShape:state.bottleShape,capColor:state.capColor,labelStyle:state.labelStyle,lang:state.lang,savedAt:new Date().toISOString()};
   try{const designs=getSavedDesigns();designs.unshift(design);storeSavedDesigns(designs);renderSavedDesigns();toast(tr("saved"));}
   catch(e){toast(state.lang==="ar"?"تعذر الحفظ في هذا المتصفح.":"Could not save in this browser.");}
 });
