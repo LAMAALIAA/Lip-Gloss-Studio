@@ -41,3 +41,23 @@ html[dir="rtl"] body{font-family:'Tajawal','Quicksand',sans-serif}html[dir="rtl"
 .saved-delete:hover{background:#fbe3ed}
 @media(max-width:900px){.saved-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.saved-section{margin:18px 12px;padding:22px 16px}}
 @media(max-width:520px){.saved-grid{grid-template-columns:1fr}.saved-section-heading h2{font-size:21px}.saved-design-preview{height:125px}.saved-actions button{font-size:11px}}
+
+/* Bottle customization and visible glitter */
+.custom-select,.shine-select{width:100%;border:1px solid #efcfdd;border-radius:11px;padding:10px 12px;background:#fff9fc;color:var(--ink);outline:none;font-size:12px;margin:0 0 12px}
+.custom-select:focus,.shine-select:focus{border-color:#dc81a7;outline:2px solid #f7d3e2}
+.cap{background:linear-gradient(90deg,color-mix(in srgb,var(--cap-color,#e8a8c2),#000 8%),#fff7fb 48%,color-mix(in srgb,var(--cap-color,#e8a8c2),#000 5%))}
+.cap:before{background:color-mix(in srgb,var(--cap-color,#e8a8c2),#000 15%);opacity:.55}
+.tube{transition:width .25s,border-radius .25s}
+.bottle[data-shape="round"] .tube{width:88px;border-radius:22px 22px 25px 25px}
+.bottle[data-shape="round"] .cap{width:61px;border-radius:17px 17px 8px 8px}
+.bottle[data-shape="round"] .bottle-base{width:72px;border-radius:0 0 16px 16px}
+.bottle[data-shape="slim"] .tube{width:61px;border-radius:7px 7px 13px 13px}
+.bottle[data-shape="slim"] .cap{width:46px;height:57px}
+.bottle[data-shape="slim"] .bottle-base{width:53px}
+.bottle[data-shape="round"] .label-sticker{left:7px;right:7px;border-radius:9px}
+.bottle[data-shape="slim"] .label-sticker{left:4px;right:4px}
+.glitter-overlay{position:absolute;z-index:1;inset:42px 5px 7px;display:flex;align-items:center;justify-content:center;flex-wrap:wrap;text-align:center;color:#fffdf2;font-size:16px;letter-spacing:3px;text-shadow:0 0 5px #fff,0 0 11px #fff7cf;pointer-events:none;opacity:.58;animation:glitterFloat 2s ease-in-out infinite alternate;transition:opacity .25s}
+.tube-liquid{opacity:1}
+.tube-liquid:after{opacity:var(--shine-opacity,.32);text-shadow:0 0 7px white;animation:twinkle 1.4s infinite alternate}
+@keyframes glitterFloat{from{transform:translateY(-2px) scale(.98)}to{transform:translateY(3px) scale(1.04)}}
+@media(max-width:900px){.custom-select,.shine-select{margin-bottom:10px}}
