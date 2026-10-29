@@ -46,7 +46,7 @@ const translations = {
     formulaTitle:"Your formula",nothingAdded:"Nothing added yet",ingredientsTitle:"Choose your ingredients",tapToAdd:"Tap to add or remove",
     base:"Gloss base",baseDesc:"Smooth & glossy",oil:"Softening oil",oilDesc:"Silky feel",shimmer:"Shimmer",shimmerDesc:"Extra sparkle",
     scent:"Vanilla scent",scentDesc:"Sweet & cozy",scentVanilla:"Vanilla scent",scentVanillaDesc:"Sweet & cozy",scentStrawberry:"Strawberry",scentStrawberryDesc:"Fruity & sweet",scentRose:"Rose",scentRoseDesc:"Soft floral",scentCoconut:"Coconut",scentCoconutDesc:"Creamy & tropical",previewEyebrow:"YOUR CREATION",previewTitle:"Gloss preview",labelEdition:"GLOSS COLLECTION",
-    previewCaption:"Handmade with a little magic",nameLabel:"Name your gloss",selectedColor:"Selected color",shineLevel:"Shine level",glitterIntensity:"Glitter & shine",shineSoft:"Soft sparkle",shineMedium:"Medium sparkle",shineStrong:"Extra sparkle",bottleShapeLabel:"Bottle shape",shapeClassic:"Classic",shapeRound:"Rounded",shapeSlim:"Slim",capColorLabel:"Cap color",capPink:"Blush pink",capLilac:"Lilac",capGold:"Champagne gold",capMint:"Soft mint",capSilver:"Silver",capPlum:"Plum",labelStyleLabel:"Label style",labelClassic:"Classic",labelCute:"Cute hearts",labelLuxury:"Luxury",downloadDesign:"Download design PNG",downloaded:"Your design PNG is ready! ✨",downloadFailed:"Could not download the design. Please try again.",
+    previewCaption:"Handmade with a little magic",nameLabel:"Name your gloss",selectedColor:"Selected color",shineLevel:"Shine level",glitterIntensity:"Glitter & shine",shineSoft:"Soft sparkle",shineMedium:"Medium sparkle",shineStrong:"Extra sparkle",bottleShapeLabel:"Bottle shape",shapeClassic:"Classic",shapeRound:"Rounded",shapeSlim:"Slim",capColorLabel:"Cap color",capPink:"Blush pink",capLilac:"Lilac",capGold:"Champagne gold",capMint:"Soft mint",capSilver:"Silver",capPlum:"Plum",labelStyleLabel:"Label style",labelClassic:"Classic",labelCute:"Cute hearts",labelLuxury:"Luxury",downloadDesign:"Download design PNG",downloaded:"Your design PNG is ready! ✨",downloadFailed:"Could not download the design. Please try again.",shareFormula:"Share my formula",shareTitle:"My Lip Gloss Studio formula",shareCopied:"Formula copied! You can paste it anywhere 💗",shareFailed:"Could not share the formula. Please try again.",formulaColors:"Colors",formulaIngredients:"Ingredients",formulaBottle:"Bottle",formulaLabel:"Label style",formulaShine:"Shine",
     feedbackStart:"Looking lovely! Add ingredients and mix to finish your gloss. 💗",startOver:"Start a new gloss",saveDesign:"Save my design",
     footer:"Small ingredients. Big magic.",empty:"Nothing added yet",addedCount:n=>`${n} ingredient${n===1?"":"s"} added`,
     statusMixing:"Mixing your gloss... ✨",statusReady:"Your gloss is ready! ✨",needIngredient:"Add at least one ingredient first 💗",
@@ -66,7 +66,7 @@ const translations = {
     formulaTitle:"تركيبتك",nothingAdded:"ما أضفتِ أي مكونات",ingredientsTitle:"اختاري المكونات",tapToAdd:"اضغطي للإضافة أو الإزالة",
     base:"قاعدة اللمعان",baseDesc:"ملمس ناعم ولامع",oil:"زيت التنعيم",oilDesc:"ملمس حريري",shimmer:"بودرة لامعة",shimmerDesc:"بريق إضافي",
     scent:"رائحة الفانيلا",scentDesc:"رائحة حلوة",scentVanilla:"فانيلا",scentVanillaDesc:"حلوة ودافئة",scentStrawberry:"فراولة",scentStrawberryDesc:"فاكهية وحلوة",scentRose:"ورد",scentRoseDesc:"رائحة زهرية ناعمة",scentCoconut:"جوز الهند",scentCoconutDesc:"كريمية واستوائية",previewEyebrow:"ابتكارك",previewTitle:"معاينة الليب قلوس",labelEdition:"مجموعة اللمعان",
-    previewCaption:"صُنع بقليل من السحر",nameLabel:"سمّي الليب قلوس",selectedColor:"اللون المختار",shineLevel:"مستوى اللمعان",glitterIntensity:"اللمعة والبريق",shineSoft:"لمعة خفيفة",shineMedium:"لمعة متوسطة",shineStrong:"لمعة قوية",bottleShapeLabel:"شكل العبوة",shapeClassic:"كلاسيكي",shapeRound:"دائري ناعم",shapeSlim:"نحيف",capColorLabel:"لون الغطاء",capPink:"وردي هادئ",capLilac:"ليلكي",capGold:"ذهبي شامبانيا",capMint:"نعناعي فاتح",capSilver:"فضي",capPlum:"برقوقي",labelStyleLabel:"ستايل الملصق",labelClassic:"كلاسيكي",labelCute:"قلوب كيوت",labelLuxury:"فاخر",downloadDesign:"تحميل التصميم PNG",downloaded:"صار تصميمك جاهزًا للتحميل! ✨",downloadFailed:"تعذر تحميل التصميم، حاولي مرة ثانية.",
+    previewCaption:"صُنع بقليل من السحر",nameLabel:"سمّي الليب قلوس",selectedColor:"اللون المختار",shineLevel:"مستوى اللمعان",glitterIntensity:"اللمعة والبريق",shineSoft:"لمعة خفيفة",shineMedium:"لمعة متوسطة",shineStrong:"لمعة قوية",bottleShapeLabel:"شكل العبوة",shapeClassic:"كلاسيكي",shapeRound:"دائري ناعم",shapeSlim:"نحيف",capColorLabel:"لون الغطاء",capPink:"وردي هادئ",capLilac:"ليلكي",capGold:"ذهبي شامبانيا",capMint:"نعناعي فاتح",capSilver:"فضي",capPlum:"برقوقي",labelStyleLabel:"ستايل الملصق",labelClassic:"كلاسيكي",labelCute:"قلوب كيوت",labelLuxury:"فاخر",downloadDesign:"تحميل التصميم PNG",downloaded:"صار تصميمك جاهزًا للتحميل! ✨",downloadFailed:"تعذر تحميل التصميم، حاولي مرة ثانية.",shareFormula:"مشاركة تركيبتي",shareTitle:"تركيبتي من استوديو الليب قلوس",shareCopied:"تم نسخ التركيبة! تقدرين تلصقينها في أي مكان 💗",shareFailed:"تعذرت مشاركة التركيبة، حاولي مرة ثانية.",formulaColors:"الألوان",formulaIngredients:"المكونات",formulaBottle:"العبوة",formulaLabel:"ستايل الملصق",formulaShine:"اللمعة",
     feedbackStart:"شكله جميل! أضيفي المكونات واخلطيها عشان تكمّلين الليب قلوس. 💗",startOver:"ابدئي من جديد",saveDesign:"احفظي تصميمي",
     footer:"مكونات بسيطة، وسحر كبير.",empty:"ما أضفتِ أي مكونات",addedCount:n=>`${n} ${n===1?"مكوّن":"مكونات"} مضافة`,
     statusMixing:"جاري خلط الليب قلوس... ✨",statusReady:"الليب قلوس جاهز! ✨",needIngredient:"أضيفي مكوّنًا واحدًا على الأقل أولًا 💗",
@@ -163,6 +163,56 @@ function currentChallenge(){
   return challenges[day%challenges.length];
 }
 function readChallengeRecord(){try{return JSON.parse(localStorage.getItem(DAILY_CHALLENGE_KEY)||"{}");}catch(e){return {};}}
+const STUDIO_STATS_KEY="lipGlossStudioAchievementStats";
+function readStudioStats(){try{return JSON.parse(localStorage.getItem(STUDIO_STATS_KEY)||"{}");}catch(e){return {};}}
+function writeStudioStats(stats){try{localStorage.setItem(STUDIO_STATS_KEY,JSON.stringify(stats));}catch(e){console.warn("Could not store achievement stats",e);}}
+function achievementCopy(){
+  const ar=state.lang==="ar";
+  return {
+    eyebrow:ar?"إنجازاتك الصغيرة":"YOUR LITTLE MILESTONES",
+    heading:ar?"الإنجازات والمستويات":"Achievements & levels",
+    intro:ar?"كل تصميم يقربك من المستوى التالي.":"Every little creation brings you closer to the next level.",
+    levelLabel:ar?"مستواك الحالي":"CURRENT LEVEL",
+    points:ar?"نقطة":"points",next:ar?"التالي: ":"Next: ",
+    levels:ar?["مبتدئة اللمعان","خبيرة مزج الألوان","فنانة اللمعة","مصممة ليب قلوس","نجمة الاستوديو"]:["Gloss Beginner","Color Mixer","Sparkle Artist","Gloss Designer","Studio Star"],
+    names:ar?["أول خلطة","أول تصميم محفوظ","جامِعة النقاط","مجموعة صغيرة","نجمة التحديات"]:["First Blend","First Saved Design","Point Collector","Little Collection","Challenge Star"],
+    desc:ar?["اخلطي لونين أو أكثر لأول مرة.","احفظي أول تصميم من إبداعك.","اجمعي 100 نقطة من التحديات.","احفظي خمسة تصاميم مختلفة.","أكملي ثلاثة تحديات يومية."]:["Blend two or more colors for the first time.","Save your first original design.","Earn 100 challenge points.","Save five different designs.","Complete three daily challenges."],
+    locked:ar?"مقفول":"Locked",unlocked:ar?"تم فتحه!":"Unlocked!"
+  };
+}
+function updateAchievements(){
+  const copy=achievementCopy(),stats=readStudioStats(),points=Math.max(0,Number(localStorage.getItem(DAILY_POINTS_KEY))||0),savedCount=getSavedDesigns().length;
+  const levels=[0,50,100,200,350];let levelIndex=0;
+  for(let i=0;i<levels.length;i++)if(points>=levels[i])levelIndex=i;
+  const nextIndex=Math.min(levelIndex+1,levels.length-1),isMax=levelIndex===levels.length-1;
+  document.querySelector('[data-ach="eyebrow"]').textContent=copy.eyebrow;
+  document.querySelector('[data-ach="heading"]').textContent=copy.heading;
+  document.querySelector('[data-ach="intro"]').textContent=copy.intro;
+  document.querySelector('[data-ach="levelLabel"]').textContent=copy.levelLabel;
+  $("#currentLevel").textContent=copy.levels[levelIndex];
+  const start=levels[levelIndex],end=isMax?start:levels[nextIndex];
+  $("#levelProgressText").textContent=isMax?`${points} ${copy.points}`:`${points} / ${end} ${copy.points}`;
+  $("#nextLevelLabel").textContent=isMax?(state.lang==="ar"?"وصلتِ للقمة!":"Top level reached!"):copy.next+copy.levels[nextIndex];
+  $("#levelProgressBar").style.width=isMax?"100%":`${Math.max(0,Math.min(100,((points-start)/(end-start))*100))}%`;
+  const achievements=[
+    {id:"firstBlend",icon:"🎨",unlocked:stats.firstBlend===true},
+    {id:"firstSave",icon:"💗",unlocked:savedCount>=1},
+    {id:"hundredPoints",icon:"⭐",unlocked:points>=100},
+    {id:"fiveDesigns",icon:"🧴",unlocked:savedCount>=5},
+    {id:"threeChallenges",icon:"🌷",unlocked:(Number(stats.completedChallenges)||0)>=3}
+  ];
+  const grid=$("#achievementGrid");grid.replaceChildren();
+  achievements.forEach((item,index)=>{
+    const card=document.createElement("article");card.className="achievement-card"+(item.unlocked?" unlocked":" locked");
+    const icon=document.createElement("div");icon.className="achievement-badge";icon.textContent=item.unlocked?item.icon:"🔒";
+    const content=document.createElement("div");content.className="achievement-copy";
+    const title=document.createElement("strong");title.textContent=copy.names[index];
+    const desc=document.createElement("p");desc.textContent=copy.desc[index];
+    const status=document.createElement("small");status.textContent=item.unlocked?copy.unlocked:copy.locked;
+    content.append(title,desc,status);card.append(icon,content);grid.append(card);
+  });
+}
+
 function updateChallenge(){
   const challenge=currentChallenge(),dayKey=localDayKey(),record=readChallengeRecord();
   const points=Math.max(0,Number(localStorage.getItem(DAILY_POINTS_KEY))||0);
@@ -176,12 +226,14 @@ function updateChallenge(){
   $("#challengeReward").textContent=state.lang==="ar"?"+٢٠ نقطة":"+20 points";
   $("#challengeStatus").textContent=doneToday?tr("challengeAlreadyDone"):tr("challengeIncomplete");
   $("#dailyChallenge").classList.toggle("challenge-complete",doneToday);
+  updateAchievements();
 }
 function awardChallengeIfComplete(){
   const challenge=currentChallenge();if(!challenge.done())return;
   const dayKey=localDayKey(),record=readChallengeRecord();
   if(record.date===dayKey&&record.challengeId===challenge.id&&record.completed)return;
   const total=Math.max(0,Number(localStorage.getItem(DAILY_POINTS_KEY))||0)+20;
+  const stats=readStudioStats();stats.completedChallenges=(Number(stats.completedChallenges)||0)+1;writeStudioStats(stats);
   try{localStorage.setItem(DAILY_POINTS_KEY,String(total));localStorage.setItem(DAILY_CHALLENGE_KEY,JSON.stringify({date:dayKey,challengeId:challenge.id,completed:true}));}catch(e){console.warn("Could not store challenge progress",e);}
   updateChallenge();toast(tr("challengeComplete"));
 }
@@ -280,7 +332,7 @@ $("#mixButton").addEventListener("click",()=>{
   if(!state.ingredients.size){toast(tr("needIngredient"));return;}
   state.mixed=false;$("#mixButton").disabled=true;$("#mixStatus").textContent=tr("statusMixing");
   $("#liquid").style.height="84%";$("#mixButton").querySelector("[data-i18n]").textContent=state.lang==="ar"?"جاري الخلط...":"Mixing...";
-  setTimeout(()=>{state.mixed=true;$("#mixButton").disabled=false;$("#mixButton").querySelector("[data-i18n]").textContent=tr("mix");update();awardChallengeIfComplete();toast(tr("statusReady"));},850);
+  setTimeout(()=>{state.mixed=true;if(state.colors.length>=2){const stats=readStudioStats();stats.firstBlend=true;writeStudioStats(stats);}$("#mixButton").disabled=false;$("#mixButton").querySelector("[data-i18n]").textContent=tr("mix");update();awardChallengeIfComplete();updateAchievements();toast(tr("statusReady"));},850);
 });
 $("#glossName").addEventListener("input",()=>{update()});
 $("#shineLevel").addEventListener("change",e=>{state.shine=Number(e.target.value)||2;update();});
@@ -297,7 +349,7 @@ $("#resetButton").addEventListener("click",()=>{
 });
 $("#saveButton").addEventListener("click",()=>{
   const design={id:`design-${Date.now()}-${Math.random().toString(36).slice(2,7)}`,name:$("#glossName").value.trim()||(state.lang==="ar"?"ليب قلوس جديد":"My Gloss"),color:state.color,colorName:state.colorName,colors:state.colors.map(item=>({...item})),ingredients:[...state.ingredients],mixed:state.mixed,shine:state.shine,bottleShape:state.bottleShape,capColor:state.capColor,labelStyle:state.labelStyle,lang:state.lang,savedAt:new Date().toISOString()};
-  try{const designs=getSavedDesigns();designs.unshift(design);storeSavedDesigns(designs);renderSavedDesigns();toast(tr("saved"));}
+  try{const designs=getSavedDesigns();designs.unshift(design);storeSavedDesigns(designs);renderSavedDesigns();updateAchievements();toast(tr("saved"));}
   catch(e){toast(state.lang==="ar"?"تعذر الحفظ في هذا المتصفح.":"Could not save in this browser.");}
 });
 function downloadDesignPNG(){
@@ -328,6 +380,36 @@ function downloadDesignPNG(){
   }catch(e){toast(tr('downloadFailed'));}
 }
 $('#downloadButton').addEventListener('click',downloadDesignPNG);
+
+function buildFormulaText(){
+  const isAr=state.lang==="ar";
+  const name=$("#glossName").value.trim()||(isAr?"ليب قلوس جديد":"My Gloss");
+  const colorNames=state.colors.map(c=>{
+    if(isAr){const match=document.querySelector(`.swatch[data-color="${c.hex}"]`);return match?.dataset.colorAr||c.name;}
+    return c.name;
+  });
+  const ingredientNames={
+    base:isAr?"قاعدة الليب قلوس":"Gloss base",oil:isAr?"زيت تنعيم":"Softening oil",shimmer:isAr?"لمعة":"Shimmer",
+    "scent-vanilla":isAr?"فانيلا":"Vanilla scent","scent-strawberry":isAr?"فراولة":"Strawberry",
+    "scent-rose":isAr?"ورد":"Rose","scent-coconut":isAr?"جوز الهند":"Coconut"
+  };
+  const shapes={classic:isAr?"كلاسيكي":"Classic",round:isAr?"دائري ناعم":"Rounded",slim:isAr?"نحيف":"Slim"};
+  const labels={classic:isAr?"كلاسيكي":"Classic",cute:isAr?"قلوب كيوت":"Cute hearts",luxury:isAr?"فاخر":"Luxury"};
+  const shine={1:isAr?"خفيفة":"Soft",2:isAr?"متوسطة":"Medium",3:isAr?"قوية":"Strong"};
+  const ingredients=[...state.ingredients].map(key=>ingredientNames[key]||key);
+  const title=isAr?"تركيبتي من استوديو الليب قلوس":"My Lip Gloss Studio formula";
+  return `${title} 💄\n${isAr?"اسم التصميم":"Design name"}: ${name}\n${isAr?"الألوان":"Colors"}: ${colorNames.join(" + ")|| (isAr?"وردي":"Pink")}\n${isAr?"المكونات":"Ingredients"}: ${ingredients.join(", ")|| (isAr?"لم تتم إضافة مكونات":"No ingredients added")}\n${isAr?"شكل العبوة":"Bottle shape"}: ${shapes[state.bottleShape]}\n${isAr?"ستايل الملصق":"Label style"}: ${labels[state.labelStyle]}\n${isAr?"مستوى اللمعة":"Shine level"}: ${shine[state.shine]}\n\nLip Gloss Studio ✨`;
+}
+async function shareFormula(){
+  const text=buildFormulaText();
+  try{
+    if(navigator.share){await navigator.share({title:tr("shareTitle"),text});toast(state.lang==="ar"?"تم فتح خيارات المشاركة 💗":"Share options opened 💗");return;}
+    if(navigator.clipboard&&window.isSecureContext){await navigator.clipboard.writeText(text);toast(tr("shareCopied"));return;}
+    const helper=document.createElement("textarea");helper.value=text;helper.setAttribute("readonly","");helper.style.position="fixed";helper.style.opacity="0";document.body.append(helper);helper.select();
+    const copied=document.execCommand("copy");helper.remove();if(copied)toast(tr("shareCopied"));else throw new Error("Clipboard unavailable");
+  }catch(error){if(error?.name==="AbortError")return;console.error("Formula sharing failed",error);toast(tr("shareFailed"));}
+}
+$("#shareButton").addEventListener("click",shareFormula);
 
 document.querySelectorAll("[data-nav]").forEach(button=>button.addEventListener("click",()=>{
   document.querySelectorAll("[data-nav]").forEach(b=>b.classList.toggle("active",b===button));

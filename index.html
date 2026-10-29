@@ -139,6 +139,7 @@
     <button class="secondary reset-button" id="resetButton">↻ <span data-i18n="startOver">Start a new gloss</span></button>
     <button class="save-button" id="saveButton">♡ <span data-i18n="saveDesign">Save my design</span></button>
     <button class="download-button" id="downloadButton">↓ <span data-i18n="downloadDesign">Download design PNG</span></button>
+    <button class="share-button" id="shareButton">♡ <span data-i18n="shareFormula">Share my formula</span></button>
   </aside>
 </main>
 
@@ -162,6 +163,15 @@
     </div>
     <div class="challenge-status" id="challengeStatus" aria-live="polite">♡ Not completed yet</div>
   </div>
+</section>
+
+<section class="achievement-section" id="achievements" aria-labelledby="achievementHeading">
+  <div class="achievement-heading">
+    <div><div class="eyebrow" data-ach="eyebrow">YOUR LITTLE MILESTONES</div><h2 id="achievementHeading" data-ach="heading">Achievements & levels</h2><p data-ach="intro">Every little creation brings you closer to the next level.</p></div>
+    <div class="level-pill"><span>✦</span><div><small data-ach="levelLabel">CURRENT LEVEL</small><strong id="currentLevel">Gloss Beginner</strong></div></div>
+  </div>
+  <div class="level-progress"><div class="level-progress-label"><span id="levelProgressText">0 / 50 points</span><b id="nextLevelLabel">Next: Color Mixer</b></div><div class="level-progress-track"><span id="levelProgressBar"></span></div></div>
+  <div class="achievement-grid" id="achievementGrid" aria-live="polite"></div>
 </section>
 
 <section class="saved-section" id="savedDesigns" aria-labelledby="savedHeading">
