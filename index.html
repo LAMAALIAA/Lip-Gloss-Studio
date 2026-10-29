@@ -8,15 +8,6 @@
   <link rel="stylesheet" href="style.css">
   <script type="module" src="script.js"></script>
 </head>
-  <head>
-
-  <meta charset="UTF-8">
-
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7700674013498764"
-     crossorigin="anonymous"></script>
-
-</head>
-
 <body>
 <header class="topbar">
   <a class="brand" href="#" aria-label="Lip Gloss Studio home">
@@ -109,6 +100,12 @@
     </div>
     <label class="input-label" for="glossName" data-i18n="nameLabel">Name your gloss</label>
     <input id="glossName" class="name-input" maxlength="24" value="Pink Dream" placeholder="e.g. Pink Dream">
+    <label class="input-label" for="labelStyle" data-i18n="labelStyleLabel">Label style</label>
+    <select id="labelStyle" class="custom-select" aria-label="Label style">
+      <option value="classic" data-i18n="labelClassic">Classic</option>
+      <option value="cute" data-i18n="labelCute">Cute hearts</option>
+      <option value="luxury" data-i18n="labelLuxury">Luxury</option>
+    </select>
     <label class="input-label" for="bottleShape" data-i18n="bottleShapeLabel">Bottle shape</label>
     <select id="bottleShape" class="custom-select" aria-label="Bottle shape">
       <option value="classic" data-i18n="shapeClassic">Classic</option>
@@ -137,6 +134,7 @@
     <div class="feedback" id="feedback" aria-live="polite" data-i18n="feedbackStart">Looking lovely! Add ingredients and mix to finish your gloss. 💗</div>
     <button class="secondary reset-button" id="resetButton">↻ <span data-i18n="startOver">Start a new gloss</span></button>
     <button class="save-button" id="saveButton">♡ <span data-i18n="saveDesign">Save my design</span></button>
+    <button class="download-button" id="downloadButton">↓ <span data-i18n="downloadDesign">Download design PNG</span></button>
   </aside>
 </main>
 
