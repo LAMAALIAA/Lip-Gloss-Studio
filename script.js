@@ -3,6 +3,12 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/13.1.0/firebas
 import {
   getAuth,
   signInAnonymously,
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+  GoogleAuthProvider,
+  OAuthProvider,
+  signInWithPopup,
+  signOut,
   onAuthStateChanged
 } from "https://www.gstatic.com/firebasejs/13.1.0/firebase-auth.js";
 
@@ -19,21 +25,12 @@ const firebaseConfig = {
 const firebaseApp = initializeApp(firebaseConfig);
 const auth = getAuth(firebaseApp);
 
-// Restore the existing session, or create an anonymous user if this is a first visit.
+// Authentication is opt-in: visitors can use the studio as guests or choose a provider.
+let currentFirebaseUser = null;
 onAuthStateChanged(auth, (user) => {
-  if (user) {
-    window.lipGlossUser = {
-      uid: user.uid,
-      isAnonymous: user.isAnonymous
-    };
-    console.info("Lip Gloss user session is ready.");
-    return;
-  }
-
-  window.lipGlossUser = null;
-  signInAnonymously(auth).catch((error) => {
-    console.error("Firebase anonymous sign-in failed:", error.code, error.message);
-  });
+  currentFirebaseUser = user;
+  window.lipGlossUser = user ? { uid: user.uid, isAnonymous: user.isAnonymous, email: user.email || null, provider: user.providerData?.[0]?.providerId || (user.isAnonymous ? "anonymous" : "unknown") } : null;
+  renderAuthStatus();
 });
 
 const translations = {
@@ -55,6 +52,7 @@ const translations = {
     reset:"Fresh start! Make something lovely ✨",navHome:"Welcome to your little gloss studio! 💗",navPlay:"Let’s make something glossy!",
     navTutorial:"Choose a color, add ingredients, then press Mix.",navAbout:"A little creative game for designing your own gloss ✨",
     colorNames:{Pink:"Pink",Berry:"Berry",Lilac:"Lilac",Peach:"Peach",Cherry:"Cherry",Plum:"Plum"},
+    accountButton:"Sign in",accountEyebrow:"YOUR LITTLE BEAUTY LAB",authHeading:"Welcome to Lip Gloss Studio",authIntro:"Sign in to make your account available across devices.",authSignedOut:"You are browsing as a guest until you choose an option.",authGuest:"Guest session active",continueGuest:"Continue as guest",orContinueWith:"or continue with",emailLabel:"Email",passwordLabel:"Password",passwordPlaceholder:"At least 6 characters",emailSignIn:"Sign in with Email",emailCreate:"Create account with Email",switchToCreate:"New here? Create an account",switchToSignIn:"Already have an account? Sign in",continueGoogle:"Continue with Google",continueApple:"Continue with Apple",signOut:"Sign out",authSetupNote:"Google and Apple sign-in must be enabled in Firebase Authentication settings.",authEmailSuccess:"Email account ready!",authProviderSuccess:"You are signed in!",authGuestSuccess:"You are now browsing as a guest.",authSignedInAs:"Signed in",authErrorGeneric:"Could not sign in. Check your details and Firebase settings.",authEmailInUse:"This email already has an account. Try signing in instead.",authInvalidCredentials:"Email or password is incorrect.",authWeakPassword:"Use a password with at least 6 characters.",authPopupClosed:"Sign-in window was closed.",authAppleSetup:"Apple sign-in needs Apple provider setup in Firebase first.",authSignOutSuccess:"You have signed out.",closeAuth:"Close",
     savedTitle:"Saved gloss design",savedText:"Your design was saved in this browser."
   },
   ar: {
@@ -75,6 +73,7 @@ const translations = {
     reset:"بداية جديدة! ابتكري شيئًا جميلًا ✨",navHome:"أهلًا بكِ في استوديو الليب قلوس! 💗",navPlay:"يلا نصنع ليب قلوس لامع!",
     navTutorial:"اختاري لونًا، أضيفي المكونات، ثم اضغطي على الخلط.",navAbout:"لعبة إبداعية لتصميم الليب قلوس الخاص بكِ ✨",
     colorNames:{Pink:"وردي",Berry:"توتي",Lilac:"ليلكي",Peach:"خوخي",Cherry:"كرزي",Plum:"برقوقي"},
+    accountButton:"تسجيل الدخول",accountEyebrow:"مختبر الجمال الصغير",authHeading:"أهلًا بكِ في استوديو الليب قلوس",authIntro:"سجلي الدخول عشان يكون حسابك متاحًا على أجهزتك المختلفة.",authSignedOut:"تتصفحين كزائرة إلى أن تختاري طريقة الدخول.",authGuest:"أنتِ تتصفحين كزائرة",continueGuest:"المتابعة كزائرة",orContinueWith:"أو تابعي باستخدام",emailLabel:"البريد الإلكتروني",passwordLabel:"كلمة المرور",passwordPlaceholder:"6 أحرف على الأقل",emailSignIn:"تسجيل الدخول بالبريد",emailCreate:"إنشاء حساب بالبريد",switchToCreate:"جديدة هنا؟ أنشئي حسابًا",switchToSignIn:"عندك حساب؟ سجلي الدخول",continueGoogle:"المتابعة باستخدام Google",continueApple:"المتابعة باستخدام Apple",signOut:"تسجيل الخروج",authSetupNote:"يجب تفعيل Google وApple من إعدادات المصادقة في Firebase.",authEmailSuccess:"حساب البريد الإلكتروني جاهز!",authProviderSuccess:"تم تسجيل الدخول بنجاح!",authGuestSuccess:"تقدرين الآن التصفح كزائرة.",authSignedInAs:"تم تسجيل الدخول",authErrorGeneric:"تعذر تسجيل الدخول. تحققي من البيانات وإعدادات Firebase.",authEmailInUse:"هذا البريد مسجل مسبقًا. جربي تسجيل الدخول بدلًا من إنشاء حساب.",authInvalidCredentials:"البريد الإلكتروني أو كلمة المرور غير صحيحة.",authWeakPassword:"استخدمي كلمة مرور من 6 أحرف على الأقل.",authPopupClosed:"تم إغلاق نافذة تسجيل الدخول.",authAppleSetup:"يلزم إعداد مزود Apple في Firebase أولًا.",authSignOutSuccess:"تم تسجيل الخروج.",closeAuth:"إغلاق",
     savedTitle:"تصميم الليب قلوس المحفوظ",savedText:"تم حفظ تصميمك في هذا المتصفح."
   }
 };
@@ -121,6 +120,8 @@ function setLanguage(lang){
     const key=el.dataset.i18n;
     if(typeof tr(key)==="string")el.textContent=tr(key);
   });
+  document.querySelectorAll("[data-i18n-placeholder]").forEach(el=>{el.placeholder=tr(el.dataset.i18nPlaceholder)});
+  renderAuthStatus();
   document.querySelectorAll(".swatch").forEach(b=>{
     const name=state.lang==="ar"?b.dataset.colorAr:b.dataset.colorName;
     b.setAttribute("aria-label",name);
@@ -420,6 +421,59 @@ document.querySelectorAll("[data-nav]").forEach(button=>button.addEventListener(
   if(button.dataset.nav==="tutorial")$("#ingredientsGrid").scrollIntoView({behavior:"smooth",block:"center"});
   toast(tr(messages[button.dataset.nav]));
 }));
+let emailAuthMode = "signin";
+function authErrorMessage(error){
+  const code=error?.code||"";
+  if(code==="auth/email-already-in-use")return tr("authEmailInUse");
+  if(["auth/invalid-credential","auth/wrong-password","auth/user-not-found","auth/invalid-email"].includes(code))return tr("authInvalidCredentials");
+  if(code==="auth/weak-password")return tr("authWeakPassword");
+  if(code==="auth/popup-closed-by-user")return tr("authPopupClosed");
+  if(code==="auth/operation-not-allowed"&&window.lastAuthProvider==="apple.com")return tr("authAppleSetup");
+  return `${tr("authErrorGeneric")} (${code||"unknown"})`;
+}
+function renderAuthStatus(){
+  const status=document.querySelector("#authStatus"), trigger=document.querySelector("#accountTrigger"), signOutButton=document.querySelector("#signOutButton");
+  if(!status||!trigger||!signOutButton)return;
+  if(currentFirebaseUser){
+    const guest=currentFirebaseUser.isAnonymous;
+    status.textContent=guest?tr("authGuest"):`${tr("authSignedInAs")}: ${currentFirebaseUser.email||currentFirebaseUser.displayName||currentFirebaseUser.providerData?.[0]?.providerId||"Account"}`;
+    trigger.textContent=guest?tr("continueGuest"):(currentFirebaseUser.email||currentFirebaseUser.displayName||tr("accountButton"));
+    signOutButton.hidden=guest;
+  }else{
+    status.textContent=tr("authSignedOut");trigger.textContent=tr("accountButton");signOutButton.hidden=true;
+  }
+}
+function openAuthPanel(){document.querySelector("#authPanel").hidden=false;document.body.classList.add("auth-open");renderAuthStatus();}
+function closeAuthPanel(){document.querySelector("#authPanel").hidden=true;document.body.classList.remove("auth-open");}
+function setAuthMode(mode){emailAuthMode=mode;document.querySelector("#emailAuthSubmit").textContent=tr(mode==="signin"?"emailSignIn":"emailCreate");document.querySelector("#authModeToggle").textContent=tr(mode==="signin"?"switchToCreate":"switchToSignIn");document.querySelector("#authPassword").autocomplete=mode==="signin"?"current-password":"new-password";}
+document.querySelector("#accountTrigger").addEventListener("click",openAuthPanel);
+document.querySelector("#authClose").addEventListener("click",closeAuthPanel);
+document.querySelector("#authBackdrop").addEventListener("click",closeAuthPanel);
+document.addEventListener("keydown",event=>{if(event.key==="Escape"&&!document.querySelector("#authPanel").hidden)closeAuthPanel();});
+document.querySelector("#authModeToggle").addEventListener("click",()=>setAuthMode(emailAuthMode==="signin"?"create":"signin"));
+document.querySelector("#guestSignIn").addEventListener("click",async()=>{
+  try{if(currentFirebaseUser?.isAnonymous){toast(tr("authGuestSuccess"));closeAuthPanel();return;}if(currentFirebaseUser&&!currentFirebaseUser.isAnonymous){toast(tr("authProviderSuccess"));closeAuthPanel();return;}await signInAnonymously(auth);toast(tr("authGuestSuccess"));closeAuthPanel();}
+  catch(error){console.error("Anonymous sign-in failed:",error);toast(authErrorMessage(error));}
+});
+document.querySelector("#emailAuthForm").addEventListener("submit",async event=>{
+  event.preventDefault();const email=document.querySelector("#authEmail").value.trim(),password=document.querySelector("#authPassword").value;
+  try{if(emailAuthMode==="create")await createUserWithEmailAndPassword(auth,email,password);else await signInWithEmailAndPassword(auth,email,password);toast(tr(emailAuthMode==="create"?"authEmailSuccess":"authProviderSuccess"));closeAuthPanel();}
+  catch(error){console.error("Email authentication failed:",error);toast(authErrorMessage(error));}
+});
+document.querySelector("#googleSignIn").addEventListener("click",async()=>{
+  try{const provider=new GoogleAuthProvider();provider.setCustomParameters({prompt:"select_account"});await signInWithPopup(auth,provider);toast(tr("authProviderSuccess"));closeAuthPanel();}
+  catch(error){console.error("Google sign-in failed:",error);toast(authErrorMessage(error));}
+});
+document.querySelector("#appleSignIn").addEventListener("click",async()=>{
+  try{window.lastAuthProvider="apple.com";const provider=new OAuthProvider("apple.com");provider.addScope("email");provider.addScope("name");await signInWithPopup(auth,provider);toast(tr("authProviderSuccess"));closeAuthPanel();}
+  catch(error){console.error("Apple sign-in failed:",error);toast(authErrorMessage(error));}
+});
+document.querySelector("#signOutButton").addEventListener("click",async()=>{
+  try{await signOut(auth);closeAuthPanel();toast(tr("authSignOutSuccess"));}
+  catch(error){console.error("Sign-out failed:",error);toast(authErrorMessage(error));}
+});
+setAuthMode("signin");
+
 migrateLegacyDesign();
 setLanguage("en");
 renderSavedDesigns();

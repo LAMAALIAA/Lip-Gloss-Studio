@@ -102,3 +102,22 @@ html[dir="rtl"] .level-progress-label b{text-align:start}
 /* Phase 7: shareable formula summary */
 .share-button{width:100%;margin-top:8px;padding:12px 16px;border:1px solid #e8c8ee;border-radius:13px;background:linear-gradient(135deg,#fffaff,#f3e9fb);color:#875b9b;font-size:12px;font-weight:800;cursor:pointer;transition:transform .18s,box-shadow .18s}
 .share-button:hover{transform:translateY(-2px);box-shadow:0 6px 15px #9d6db320}
+
+/* Phase 8: sign-in and guest account options */
+.account-trigger{border:1px solid #e8bfd1;background:linear-gradient(135deg,#fff7fb,#f9e4ee);color:#a84e79;border-radius:24px;padding:10px 14px;font-size:11px;font-weight:800;max-width:180px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.account-trigger:hover{background:#fbe3ed}
+.auth-panel[hidden]{display:none}
+.auth-panel{position:fixed;inset:0;z-index:30;display:grid;place-items:center;padding:18px;overflow:auto}
+.auth-backdrop{position:fixed;inset:0;background:#48253699;backdrop-filter:blur(5px)}
+.auth-card{position:relative;z-index:1;width:min(100%,440px);max-height:calc(100dvh - 36px);overflow:auto;padding:28px;border:1px solid #f0d5e1;border-radius:25px;background:linear-gradient(145deg,#fffdfb,#fff3f8 65%,#f8effb);box-shadow:0 25px 80px #3c182b55;text-align:center}
+.auth-close{position:absolute;top:12px;inset-inline-end:13px;width:34px;height:34px;border:1px solid #edd4df;border-radius:50%;background:#fff9fc;color:#9b5876;font-size:24px;line-height:1}
+.auth-logo{display:grid;place-items:center;width:58px;height:58px;margin:0 auto 14px;border-radius:20px;background:#f9e0eb;font-size:29px;box-shadow:0 7px 18px #dba5bf44}
+.auth-card .eyebrow{margin-bottom:7px}.auth-card h2{margin:0;color:#753b58;font-size:22px;line-height:1.5}.auth-intro{margin:9px 0 14px;color:#98748a;font-size:12px;line-height:1.8}
+.auth-status{margin:0 0 14px;padding:10px 12px;border:1px solid #f0d5e1;border-radius:12px;background:#fff9fc;color:#98617d;font-size:11px;line-height:1.7;overflow-wrap:anywhere}
+.auth-option{width:100%;min-height:44px;display:flex;align-items:center;justify-content:center;gap:10px;padding:11px 14px;border:1px solid #e8cfdb;border-radius:13px;background:#fffdfd;color:#70445a;font-size:12px;font-weight:800;transition:transform .15s,box-shadow .15s;}
+.auth-option:hover{transform:translateY(-1px);box-shadow:0 5px 14px #875a6214}.auth-option span{font-size:18px}.guest-option{background:#fff5fa;border-color:#efc8da;color:#a64e78}.email-option{margin-top:14px;background:linear-gradient(135deg,#e978a4,#c75c8b);border-color:transparent;color:white}.google-option{margin-top:10px}.apple-option{margin-top:10px;background:#27232a;color:#fff;border-color:#27232a}.provider-mark{display:grid;place-items:center;width:22px;height:22px;border-radius:50%;background:white;color:#4285f4;font-family:Arial,sans-serif;font-size:15px;font-weight:900}
+.auth-divider{display:flex;align-items:center;gap:10px;margin:15px 0;color:#b18b9d;font-size:10px}.auth-divider:before,.auth-divider:after{content:"";height:1px;flex:1;background:#ecd6e0}
+.email-auth-form{text-align:start}.email-auth-form label{display:block;margin:11px 0 6px;color:#86516b;font-size:11px;font-weight:800}.email-auth-form input{width:100%;height:43px;border:1px solid #e9cbd9;border-radius:11px;background:#fffdfd;padding:10px 12px;color:#65334c;font-size:12px;outline:none}.email-auth-form input:focus{border-color:#dc81a7;box-shadow:0 0 0 3px #f7dce8}.email-auth-form input::placeholder{color:#c1a5b3}
+.auth-mode-toggle{margin:11px auto 2px;padding:7px 9px;border:0;background:transparent;color:#ae5c82;font-size:11px;font-weight:800;text-decoration:underline;text-underline-offset:3px}.auth-signout{width:100%;margin-top:12px;padding:10px;border:1px solid #e9cbd9;border-radius:12px;background:#fff;color:#a34b73;font-weight:800;font-size:11px}.auth-signout[hidden]{display:none}.auth-note{margin:15px 0 0;color:#ae91a0;font-size:9px;line-height:1.7}
+body.auth-open{overflow:hidden}
+@media(max-width:720px){.account-trigger{padding:9px 11px;font-size:10px;max-width:130px}.auth-card{padding:24px 20px;border-radius:22px}.auth-card h2{font-size:20px}}
