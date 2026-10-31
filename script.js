@@ -6,7 +6,8 @@ import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
   GoogleAuthProvider,
-  signInWithPopup,
+  signInWithRedirect,
+  getRedirectResult,
   signOut,
   onAuthStateChanged
 } from "https://www.gstatic.com/firebasejs/13.1.0/firebase-auth.js";
@@ -30,6 +31,16 @@ onAuthStateChanged(auth, (user) => {
   currentFirebaseUser = user;
   window.lipGlossUser = user ? { uid: user.uid, isAnonymous: user.isAnonymous, email: user.email || null, provider: user.providerData?.[0]?.providerId || (user.isAnonymous ? "anonymous" : "unknown") } : null;
   renderAuthStatus();
+});
+// Complete Google sign-in after Firebase redirects back to this page.
+getRedirectResult(auth).then((result) => {
+  if (result?.user) {
+    toast(tr("authProviderSuccess"));
+    closeAuthPanel();
+  }
+}).catch((error) => {
+  console.error("Google redirect sign-in failed:", error);
+  toast(authErrorMessage(error));
 });
 
 const translations = {
@@ -459,8 +470,14 @@ document.querySelector("#emailAuthForm").addEventListener("submit",async event=>
   catch(error){console.error("Email authentication failed:",error);toast(authErrorMessage(error));}
 });
 document.querySelector("#googleSignIn").addEventListener("click",async()=>{
-  try{const provider=new GoogleAuthProvider();provider.setCustomParameters({prompt:"select_account"});await signInWithPopup(auth,provider);toast(tr("authProviderSuccess"));closeAuthPanel();}
-  catch(error){console.error("Google sign-in failed:",error);toast(authErrorMessage(error));}
+  try{
+    const provider=new GoogleAuthProvider();
+    provider.setCustomParameters({prompt:"select_account"});
+    await signInWithRedirect(auth,provider);
+  }catch(error){
+    console.error("Google redirect sign-in failed:",error);
+    toast(authErrorMessage(error));
+  }
 });
 document.querySelector("#signOutButton").addEventListener("click",async()=>{
   try{await signOut(auth);closeAuthPanel();toast(tr("authSignOutSuccess"));}
