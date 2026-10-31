@@ -6,7 +6,6 @@ import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
   GoogleAuthProvider,
-  OAuthProvider,
   signInWithPopup,
   signOut,
   onAuthStateChanged
@@ -52,7 +51,7 @@ const translations = {
     reset:"Fresh start! Make something lovely ✨",navHome:"Welcome to your little gloss studio! 💗",navPlay:"Let’s make something glossy!",
     navTutorial:"Choose a color, add ingredients, then press Mix.",navAbout:"A little creative game for designing your own gloss ✨",
     colorNames:{Pink:"Pink",Berry:"Berry",Lilac:"Lilac",Peach:"Peach",Cherry:"Cherry",Plum:"Plum"},
-    accountButton:"Sign in",accountEyebrow:"YOUR LITTLE BEAUTY LAB",authHeading:"Welcome to Lip Gloss Studio",authIntro:"Sign in to make your account available across devices.",authSignedOut:"You are browsing as a guest until you choose an option.",authGuest:"Guest session active",continueGuest:"Continue as guest",orContinueWith:"or continue with",emailLabel:"Email",passwordLabel:"Password",passwordPlaceholder:"At least 6 characters",emailSignIn:"Sign in with Email",emailCreate:"Create account with Email",switchToCreate:"New here? Create an account",switchToSignIn:"Already have an account? Sign in",continueGoogle:"Continue with Google",continueApple:"Continue with Apple",signOut:"Sign out",authSetupNote:"Google and Apple sign-in must be enabled in Firebase Authentication settings.",authEmailSuccess:"Email account ready!",authProviderSuccess:"You are signed in!",authGuestSuccess:"You are now browsing as a guest.",authSignedInAs:"Signed in",authErrorGeneric:"Could not sign in. Check your details and Firebase settings.",authEmailInUse:"This email already has an account. Try signing in instead.",authInvalidCredentials:"Email or password is incorrect.",authWeakPassword:"Use a password with at least 6 characters.",authPopupClosed:"Sign-in window was closed.",authAppleSetup:"Apple sign-in needs Apple provider setup in Firebase first.",authSignOutSuccess:"You have signed out.",closeAuth:"Close",
+    accountButton:"Sign in",accountEyebrow:"YOUR LITTLE BEAUTY LAB",authHeading:"Welcome to Lip Gloss Studio",authIntro:"Sign in to make your account available across devices.",authSignedOut:"You are browsing as a guest until you choose an option.",authGuest:"Guest session active",continueGuest:"Continue as guest",orContinueWith:"or continue with",emailLabel:"Email",passwordLabel:"Password",passwordPlaceholder:"At least 6 characters",emailSignIn:"Sign in with Email",emailCreate:"Create account with Email",switchToCreate:"New here? Create an account",switchToSignIn:"Already have an account? Sign in",continueGoogle:"Continue with Google",signOut:"Sign out",authSetupNote:"Google sign-in must be enabled in Firebase Authentication settings.",authEmailSuccess:"Email account ready!",authProviderSuccess:"You are signed in!",authGuestSuccess:"You are now browsing as a guest.",authSignedInAs:"Signed in",authErrorGeneric:"Could not sign in. Check your details and Firebase settings.",authEmailInUse:"This email already has an account. Try signing in instead.",authInvalidCredentials:"Email or password is incorrect.",authWeakPassword:"Use a password with at least 6 characters.",authPopupClosed:"Sign-in window was closed.",authSignOutSuccess:"You have signed out.",closeAuth:"Close",
     savedTitle:"Saved gloss design",savedText:"Your design was saved in this browser."
   },
   ar: {
@@ -73,7 +72,7 @@ const translations = {
     reset:"بداية جديدة! ابتكري شيئًا جميلًا ✨",navHome:"أهلًا بكِ في استوديو الليب قلوس! 💗",navPlay:"يلا نصنع ليب قلوس لامع!",
     navTutorial:"اختاري لونًا، أضيفي المكونات، ثم اضغطي على الخلط.",navAbout:"لعبة إبداعية لتصميم الليب قلوس الخاص بكِ ✨",
     colorNames:{Pink:"وردي",Berry:"توتي",Lilac:"ليلكي",Peach:"خوخي",Cherry:"كرزي",Plum:"برقوقي"},
-    accountButton:"تسجيل الدخول",accountEyebrow:"مختبر الجمال الصغير",authHeading:"أهلًا بكِ في استوديو الليب قلوس",authIntro:"سجلي الدخول عشان يكون حسابك متاحًا على أجهزتك المختلفة.",authSignedOut:"تتصفحين كزائرة إلى أن تختاري طريقة الدخول.",authGuest:"أنتِ تتصفحين كزائرة",continueGuest:"المتابعة كزائرة",orContinueWith:"أو تابعي باستخدام",emailLabel:"البريد الإلكتروني",passwordLabel:"كلمة المرور",passwordPlaceholder:"6 أحرف على الأقل",emailSignIn:"تسجيل الدخول بالبريد",emailCreate:"إنشاء حساب بالبريد",switchToCreate:"جديدة هنا؟ أنشئي حسابًا",switchToSignIn:"عندك حساب؟ سجلي الدخول",continueGoogle:"المتابعة باستخدام Google",continueApple:"المتابعة باستخدام Apple",signOut:"تسجيل الخروج",authSetupNote:"يجب تفعيل Google وApple من إعدادات المصادقة في Firebase.",authEmailSuccess:"حساب البريد الإلكتروني جاهز!",authProviderSuccess:"تم تسجيل الدخول بنجاح!",authGuestSuccess:"تقدرين الآن التصفح كزائرة.",authSignedInAs:"تم تسجيل الدخول",authErrorGeneric:"تعذر تسجيل الدخول. تحققي من البيانات وإعدادات Firebase.",authEmailInUse:"هذا البريد مسجل مسبقًا. جربي تسجيل الدخول بدلًا من إنشاء حساب.",authInvalidCredentials:"البريد الإلكتروني أو كلمة المرور غير صحيحة.",authWeakPassword:"استخدمي كلمة مرور من 6 أحرف على الأقل.",authPopupClosed:"تم إغلاق نافذة تسجيل الدخول.",authAppleSetup:"يلزم إعداد مزود Apple في Firebase أولًا.",authSignOutSuccess:"تم تسجيل الخروج.",closeAuth:"إغلاق",
+    accountButton:"تسجيل الدخول",accountEyebrow:"مختبر الجمال الصغير",authHeading:"أهلًا بكِ في استوديو الليب قلوس",authIntro:"سجلي الدخول عشان يكون حسابك متاحًا على أجهزتك المختلفة.",authSignedOut:"تتصفحين كزائرة إلى أن تختاري طريقة الدخول.",authGuest:"أنتِ تتصفحين كزائرة",continueGuest:"المتابعة كزائرة",orContinueWith:"أو تابعي باستخدام",emailLabel:"البريد الإلكتروني",passwordLabel:"كلمة المرور",passwordPlaceholder:"6 أحرف على الأقل",emailSignIn:"تسجيل الدخول بالبريد",emailCreate:"إنشاء حساب بالبريد",switchToCreate:"جديدة هنا؟ أنشئي حسابًا",switchToSignIn:"عندك حساب؟ سجلي الدخول",continueGoogle:"المتابعة باستخدام Google",signOut:"تسجيل الخروج",authSetupNote:"يجب تفعيل Google من إعدادات المصادقة في Firebase.",authEmailSuccess:"حساب البريد الإلكتروني جاهز!",authProviderSuccess:"تم تسجيل الدخول بنجاح!",authGuestSuccess:"تقدرين الآن التصفح كزائرة.",authSignedInAs:"تم تسجيل الدخول",authErrorGeneric:"تعذر تسجيل الدخول. تحققي من البيانات وإعدادات Firebase.",authEmailInUse:"هذا البريد مسجل مسبقًا. جربي تسجيل الدخول بدلًا من إنشاء حساب.",authInvalidCredentials:"البريد الإلكتروني أو كلمة المرور غير صحيحة.",authWeakPassword:"استخدمي كلمة مرور من 6 أحرف على الأقل.",authPopupClosed:"تم إغلاق نافذة تسجيل الدخول.",authSignOutSuccess:"تم تسجيل الخروج.",closeAuth:"إغلاق",
     savedTitle:"تصميم الليب قلوس المحفوظ",savedText:"تم حفظ تصميمك في هذا المتصفح."
   }
 };
@@ -428,7 +427,6 @@ function authErrorMessage(error){
   if(["auth/invalid-credential","auth/wrong-password","auth/user-not-found","auth/invalid-email"].includes(code))return tr("authInvalidCredentials");
   if(code==="auth/weak-password")return tr("authWeakPassword");
   if(code==="auth/popup-closed-by-user")return tr("authPopupClosed");
-  if(code==="auth/operation-not-allowed"&&window.lastAuthProvider==="apple.com")return tr("authAppleSetup");
   return `${tr("authErrorGeneric")} (${code||"unknown"})`;
 }
 function renderAuthStatus(){
@@ -463,10 +461,6 @@ document.querySelector("#emailAuthForm").addEventListener("submit",async event=>
 document.querySelector("#googleSignIn").addEventListener("click",async()=>{
   try{const provider=new GoogleAuthProvider();provider.setCustomParameters({prompt:"select_account"});await signInWithPopup(auth,provider);toast(tr("authProviderSuccess"));closeAuthPanel();}
   catch(error){console.error("Google sign-in failed:",error);toast(authErrorMessage(error));}
-});
-document.querySelector("#appleSignIn").addEventListener("click",async()=>{
-  try{window.lastAuthProvider="apple.com";const provider=new OAuthProvider("apple.com");provider.addScope("email");provider.addScope("name");await signInWithPopup(auth,provider);toast(tr("authProviderSuccess"));closeAuthPanel();}
-  catch(error){console.error("Apple sign-in failed:",error);toast(authErrorMessage(error));}
 });
 document.querySelector("#signOutButton").addEventListener("click",async()=>{
   try{await signOut(auth);closeAuthPanel();toast(tr("authSignOutSuccess"));}
