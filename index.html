@@ -219,5 +219,29 @@
 </section>
 <footer><span>♥</span> <span data-i18n="footer">Small ingredients. Big magic.</span> <span>✧</span></footer>
 <div class="toast" id="toast" role="status"></div>
+<script>
+// Keep the sign-in dialog usable even if the Firebase module fails to load.
+(function () {
+  const panel = document.getElementById('authPanel');
+  const trigger = document.getElementById('accountTrigger');
+  const closeButton = document.getElementById('authClose');
+  const backdrop = document.getElementById('authBackdrop');
+  if (!panel || !trigger) return;
+  const open = function () {
+    panel.hidden = false;
+    document.body.classList.add('auth-open');
+  };
+  const close = function () {
+    panel.hidden = true;
+    document.body.classList.remove('auth-open');
+  };
+  trigger.addEventListener('click', open);
+  if (closeButton) closeButton.addEventListener('click', close);
+  if (backdrop) backdrop.addEventListener('click', close);
+  document.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape' && !panel.hidden) close();
+  });
+})();
+</script>
 </body>
 </html>
